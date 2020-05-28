@@ -15,7 +15,7 @@ class Calculator:
             result = self.add(result,op1)
         return result
     def divide(self, n, d):
-        if (d == 0):
+        if (d <= 0 or n < 0):
             raise ArithmeticError("No se permiten valores negativos")
         quotient = 0
         residue = n
