@@ -43,5 +43,17 @@ class CalculatorTest(unittest.TestCase):
     def test_mult_invalido_negativo_2(self):
         self.assertRaises(ArithmeticError, self.calculator.multiple, 2, -2)
 
+    def test_div_enteros(self):
+        self.assertEqual((1,0), self.calculator.divide(2,2))
+
+    def test_div_enteros_1(self):
+        self.assertEqual((2,0), self.calculator.divide(4,2))
+
+    def test_div_enteros_2(self):
+        self.assertEqual((1,1), self.calculator.divide(3,2))
+    
+    def test_div_enteros_por_uno(self):
+        self.assertEqual((2,0), self.calculator.divide(2,1))
+
 if __name__ == "__main__":
     unittest.main()
