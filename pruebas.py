@@ -36,6 +36,12 @@ class CalculatorTest(unittest.TestCase):
     
     def test_mult_enteros_por_uno(self):
         self.assertEqual(2, self.calculator.multiple(2,1))
+    
+    def test_mult_invalido_negativo(self):
+        self.assertRaises(ArithmeticError, self.calculator.multiple, -2, 2)
+    
+    def test_mult_invalido_negativo_2(self):
+        self.assertRaises(ArithmeticError, self.calculator.multiple, 2, -2)
 
 if __name__ == "__main__":
     unittest.main()
