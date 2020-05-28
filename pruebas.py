@@ -51,6 +51,12 @@ class CalculatorTest(unittest.TestCase):
 
     def test_div_enteros_2(self):
         self.assertEqual((1,1), self.calculator.divide(3,2))
+
+    def test_div_enteros_3(self):
+        self.assertEqual((0,0), self.calculator.divide(0,2))
+
+    def test_div_enteros_4(self):
+        self.assertEqual((0,20), self.calculator.divide(20,70))
     
     def test_div_enteros_por_uno(self):
         self.assertEqual((2,0), self.calculator.divide(2,1))
