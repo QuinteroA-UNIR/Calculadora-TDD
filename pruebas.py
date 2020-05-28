@@ -15,6 +15,18 @@ class CalculatorTest(unittest.TestCase):
     
     def test_suma_enteros_por_cero(self):
         self.assertEqual(2, self.calculator.add(2,0))
+    
+    def test_resta_enteros(self):
+        self.assertEqual(0, self.calculator.minus(2,2))
+    
+    def test_resta_invalido_negativo(self):
+        self.assertRaises(ArithmeticError, self.calculator.minus, -2, 2)
+    
+    def test_resta_invalido_negativo_2(self):
+        self.assertRaises(ArithmeticError, self.calculator.minus, 2, -2)
+    
+    def test_resta_enteros_por_cero(self):
+        self.assertEqual(2, self.calculator.minus(2,0))
 
 if __name__ == "__main__":
     unittest.main()
