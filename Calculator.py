@@ -1,2 +1,3 @@
 class Calculator:
-    pass
+    def add(self, op1, op2):
+        pass
