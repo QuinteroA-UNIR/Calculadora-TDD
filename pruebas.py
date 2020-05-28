@@ -71,7 +71,13 @@ class CalculatorTest(unittest.TestCase):
         self.assertRaises(ArithmeticError, self.calculator.divide, 2, -2)
     
     def test_sqrt(self):
-        self.assertEqual(2, self.sqrt(4))
+        self.assertEqual((2,0), self.calculator.sqrt(4))
+    
+    def test_sqrt(self):
+        self.assertEqual((1, 41421), self.calculator.sqrt(2))
+    
+    def test_sqrt(self):
+        self.assertEqual((1, 732000), self.calculator.sqrt(3))
 
 if __name__ == "__main__":
     unittest.main()
