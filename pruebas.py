@@ -69,6 +69,9 @@ class CalculatorTest(unittest.TestCase):
     
     def test_div_invalido_negativo_2(self):
         self.assertRaises(ArithmeticError, self.calculator.divide, 2, -2)
+    
+    def test_sqrt(self):
+        self.assertEqual(2, self.sqrt(4))
 
 if __name__ == "__main__":
     unittest.main()
