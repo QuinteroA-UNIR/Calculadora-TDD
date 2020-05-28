@@ -54,6 +54,9 @@ class CalculatorTest(unittest.TestCase):
     
     def test_div_enteros_por_uno(self):
         self.assertEqual((2,0), self.calculator.divide(2,1))
+    
+    def test_div_enteros_por_cero(self):
+        self.assertRaises(ArithmeticError, self.calculator.divide, -2, 0)
 
 if __name__ == "__main__":
     unittest.main()
