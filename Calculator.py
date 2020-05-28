@@ -12,5 +12,5 @@ class Calculator:
             raise ArithmeticError("No se permiten valores negativos")
         result = 0
         for i in range(op2):
-            result += op1
+            result = self.add(result,op1)
         return result
