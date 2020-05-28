@@ -14,3 +14,10 @@ class Calculator:
         for i in range(op2):
             result = self.add(result,op1)
         return result
+    def divide(self, n, d):
+        quotient = 0
+        residue = n
+        while residue >= d:
+            quotient = self.add(quotient, 1)
+            residue = self.minus(residue, d)
+        return (quotient, residue)
