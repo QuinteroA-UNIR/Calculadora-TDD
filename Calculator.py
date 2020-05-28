@@ -23,3 +23,17 @@ class Calculator:
             quotient = self.add(quotient, 1)
             residue = self.minus(residue, d)
         return (quotient, residue)
+    def sqrt(self, op):
+        a = self.multiple(5, op)
+        b = 5
+        while b < 1000000:
+            if (a >= b):
+                a = self.minus(a,b)
+                b = self.add(b, 10)
+            else:
+                a = self.multiple(a, 100)
+                b = self.multiple(b, 10)
+                b = self.minus(b, 45)
+        b = self.minus(b, 5)
+        return self.divide(b, 1000000)
+
