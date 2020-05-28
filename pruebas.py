@@ -28,5 +28,14 @@ class CalculatorTest(unittest.TestCase):
     def test_resta_enteros_por_cero(self):
         self.assertEqual(2, self.calculator.minus(2,0))
 
+    def test_mult_enteros(self):
+        self.assertEqual(4, self.calculator.multiple(2,2))
+    
+    def test_mult_enteros_por_cero(self):
+        self.assertEqual(0, self.calculator.multiple(2,0))
+    
+    def test_mult_enteros_por_uno(self):
+        self.assertEqual(2, self.calculator.multiple(2,1))
+
 if __name__ == "__main__":
     unittest.main()
