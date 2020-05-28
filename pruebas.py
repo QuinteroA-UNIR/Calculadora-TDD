@@ -63,6 +63,12 @@ class CalculatorTest(unittest.TestCase):
     
     def test_div_enteros_por_cero(self):
         self.assertRaises(ArithmeticError, self.calculator.divide, -2, 0)
+    
+    def test_div_invalido_negativo(self):
+        self.assertRaises(ArithmeticError, self.calculator.divide, -2, 2)
+    
+    def test_div_invalido_negativo_2(self):
+        self.assertRaises(ArithmeticError, self.calculator.divide, 2, -2)
 
 if __name__ == "__main__":
     unittest.main()
