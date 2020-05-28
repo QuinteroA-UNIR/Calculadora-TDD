@@ -12,6 +12,9 @@ class CalculatorTest(unittest.TestCase):
     
     def test_suma_invalido_negativo_2(self):
         self.assertRaises(ArithmeticError, self.calculator.add, 2, -2)
+    
+    def test_suma_enteros_por_cero(self):
+        self.assertEqual(2, self.calculator.add(2,0))
 
 if __name__ == "__main__":
     unittest.main()
